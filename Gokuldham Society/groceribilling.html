@@ -1,0 +1,42 @@
+<!-- 4. Grocery Billing - Dayaben Ki Garba Shopping!
+Scenario: Dayaben garba shopping ke liye list banati hai.
+Logic:
+Generate random prices for 5 items.
+Calculate total cost + 5% GST.
+Output: Shopping list aur final bill browser par dikhayein. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="shopping_bill"></div>
+</body>
+<script>
+    function Dayaben_Ki_Garba_Shopping(){
+    console.log("      ")
+    console.log("---------------------------------------------------");
+    console.log("Dayaben Ki Garba Shopping!");
+
+    let chaniya_choli = 10000;
+    let dandiya = 300;
+    let ornametnts = 4000;
+    let dandiya_shoes = 5000;
+
+    let total = chaniya_choli + dandiya + ornametnts + dandiya_shoes; // shopping items
+    let gst = total * 0.05; // GST
+    let bill = total + gst; 
+
+    document.getElementById("shopping_bill").innerHTML = `<h2>Garba Shopping Bill</h2> <h4>Chaniya Choli: <h4> <p> ${chaniya_choli} <p> <h4>Dandiya: <h4> <p> ${dandiya} <p> <h4>ornametnts: <h4> <p> ${ornametnts} <p> <h4>dandiya_shoes: <h4> <p> ${dandiya_shoes} <p> <h4>Total: ${total} </h4><h4>gst: ${gst} </h4><h4> Total ammount: ${bill}</h4> `
+    
+    if(bill > 1000){
+        document.write("<br>Dayaben ki Garba Shopping Successfull");
+    }
+}
+Dayaben_Ki_Garba_Shopping()
+</script>
+</html>

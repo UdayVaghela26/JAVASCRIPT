@@ -1,0 +1,57 @@
+<!-- 3. Grading System - Bhide Sir Ke Students Ka Result!
+Scenario: Bhide sir apne students ke marks ka grading kar rahe hain.
+Logic:
+Marks >= 90: "A1 - Topper of the Class"
+Marks 75-89: "A2 - Good Effort"
+Marks 50-74: "B - Need Improvement"
+Marks < 50: "Fail - Padho Beta Padho"
+Output: Display grade using innerHTML. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading System</title>
+</head>
+<body>
+    <h1>Bhide Sir Ke Students Ka Result</h1>
+    <label for="marks">Enter Marks: </label>
+    <input type="number" id="marks" placeholder="Enter marks here">
+    <button onclick="gradeStudent()">Check Grade</button>
+    <p id="result"></p>
+
+    <script>
+        function gradeStudent() {
+            const marks = document.getElementById("marks").value; // Get the marks input
+            const resultElement = document.getElementById("result"); // Get the result element
+
+            // Determine the grade based on the marks
+            let grade = "";
+            if (marks >= 90) 
+            {
+                grade = "A1 - Topper of the Class";
+            } 
+            else if (marks >= 75 && marks <= 89) 
+            {
+                grade = "A2 - Good Effort";
+            } 
+            else if (marks >= 50 && marks <= 74) 
+            {
+                grade = "B - Need Improvement";
+            } 
+            else if (marks < 50) 
+            {
+                grade = "Fail - Padho Beta Padho";
+            } 
+            else 
+            {
+                grade = "Invalid Marks Entered!";
+            }
+
+            // Display the grade using innerHTML
+            resultElement.innerHTML = `Grade: ${grade}`;
+        }
+    </script>
+</body>
+</html>

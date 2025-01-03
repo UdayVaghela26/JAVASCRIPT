@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="bonuscalculation"></div>
+</body>
+<script>
+    function Taarak_Mehta_Ki_Bonus_Calculation(){
+    let basic_salary = 40000;
+    let hra = basic_salary * 0.3; // 30%
+    let da = basic_salary * 0.2;
+    let tax = basic_salary * 0.1;
+
+    let gross_salary = basic_salary + hra + da;
+    let net_salary = gross_salary - tax;
+
+    document.getElementById("bonuscalculation").innerHTML = `<h2>Taarak Mehta Ki Bonus Calculation</h2> <h4>Basic Salary: ${basic_salary} </h4> <h4>Gross Salary: ${gross_salary} </h4> <h4>Net Salary: ${net_salary} </h4>`
+
+    if(net_salary > basic_salary){
+        document.write("<br>Tarak Mehta Ka Balance Perfect hai!");
+    }
+}
+Taarak_Mehta_Ki_Bonus_Calculation()
+</script>
+</html>
