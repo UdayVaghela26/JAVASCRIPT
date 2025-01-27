@@ -19,7 +19,7 @@ document.getElementById("passwordForm").addEventListener("submit", function (e)
     } 
     else if (newPassword !== confirmPassword) 
     {
-        message.textContent = "Error: New passwords do not match!";
+        errormessage.textContent = "Error: New passwords do not match!";
     } 
     else 
     {
